@@ -9,7 +9,15 @@
  *   Rating: 2
  */
 int allOddBits(int x) {
-#error TODO: Return 1 if every odd-numbered bit of x is set.
+  int mask = (int)0xAAAAAAAA;
+  // int i = 1;
+  // int mask = 0;
+  // do{
+  //   mask += (1 << i);
+  //   i += 2;
+  // }while(i <= 31);
+  return !(x & mask ^ mask);
+//#error TODO: Return 1 if every odd-numbered bit of x is set.
 }
 
 int main(void) {

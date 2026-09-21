@@ -9,7 +9,14 @@
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-#error TODO: Return 1 when x is between 0x30 and 0x39 inclusive.
+  int begin = (int)0x30;
+  int end = (int)0x39;
+  int nega = (int)0x80000000;
+
+  return !((end - x & nega) | (x - begin & nega));
+
+
+//#error TODO: Return 1 when x is between 0x30 and 0x39 inclusive.
 }
 
 int main(void) {

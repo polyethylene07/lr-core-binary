@@ -8,7 +8,10 @@
  *   Rating: 1
  */
 int bitXor(int x, int y) {
-#error TODO: Implement bitXor using only ~ and &.
+  int i = 0;
+  i += (x & ~y) + (~x & y);
+  return i;
+//#error TODO: Implement bitXor using only ~ and &.
 }
 
 int main(void) {

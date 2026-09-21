@@ -7,7 +7,9 @@
  *   Rating: 1
  */
 int tmin(void) {
-#error TODO: Return the minimum 32-bit two's-complement integer
+  int i = 1;
+  return (1 << 31);
+//#error TODO: Return the minimum 32-bit two's-complement integer
 }
 
 int main(void) {
