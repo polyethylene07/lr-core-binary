@@ -11,9 +11,9 @@
 int isAsciiDigit(int x) {
   int begin = 0x30;
   int end = 0x39;
-  int nega = 0x80000000;
+  int nega = (1 << 31);
 
-  return !((end - x & nega) | (x - begin & nega));
+  return !((end + (~x + 1) & nega) | (x + (~begin + 1) & nega));
 
 
 //#error TODO: Return 1 when x is between 0x30 and 0x39 inclusive.

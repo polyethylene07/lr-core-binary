@@ -9,7 +9,7 @@
  *   Rating: 2
  */
 int allOddBits(int x) {
-  int mask = (int)0xAAAAAAAA;
+  int mask = 0x000000AA + (0x000000AA << 8) + (0x000000AA << 16) + (0x000000AA << 24);
   // int i = 1;
   // int mask = 0;
   // do{

@@ -9,7 +9,7 @@
  */
 int isLessOrEqual(int x, int y) {
   int i = (1 << 31);
-  return !((y - x) & i);
+  return !((y + (~x + 1)) & i);
 //#error TODO: Return 1 when x is less than or equal to y.
 }
 
