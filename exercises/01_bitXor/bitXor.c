@@ -9,7 +9,7 @@
  */
 int bitXor(int x, int y) {
   
-  return (x & ~y) + (~x & y);
+  return (x & y) & ~(~x & ~y);
 //#error TODO: Implement bitXor using only ~ and &.
 }
 
