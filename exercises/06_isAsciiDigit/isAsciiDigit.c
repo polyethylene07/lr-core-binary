@@ -9,9 +9,9 @@
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-  int begin = (int)0x30;
-  int end = (int)0x39;
-  int nega = (int)0x80000000;
+  int begin = 0x30;
+  int end = 0x39;
+  int nega = 0x80000000;
 
   return !((end - x & nega) | (x - begin & nega));
 
